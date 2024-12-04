@@ -26,8 +26,7 @@ RUN pip install --no-cache-dir -r requirements.txt \
     && pip install jupyter notebook
 
 # Copy the Selenium script (optional for preloading scripts)
-COPY your_script.py .
-COPY forms.ipynb .
+COPY notebooks/ .
 
 # Expose port for Jupyter Notebook
 EXPOSE 8888
