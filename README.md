@@ -34,7 +34,7 @@ sudo apt update && sudo apt install x11-apps -y
 xhost +local:
 ```
 
-# Cpmandos para crear la imagen y correr el client con jupyter
+# Comandos para crear la imagen y correr el client con jupyter
 Utiliza los siguientes comandos para crear un cliente de selenium que se conectará al grid para poder iniciar una sesión e ir crapeando o llenando en automático.
 ```bash
 docker build -t selenium-client .
