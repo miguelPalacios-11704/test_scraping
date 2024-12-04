@@ -1,27 +1,3 @@
-# # Base image with Python
-# FROM python:3.11-slim
-
-# # Set working directory
-# WORKDIR /app
-
-# # Install dependencies
-# RUN apt-get update && apt-get install -y \
-#     wget \
-#     x11-apps \
-#     && rm -rf /var/lib/apt/lists/*
-
-# # Install Python libraries
-# COPY requirements.txt .
-# RUN pip install --no-cache-dir -r requirements.txt
-
-# # Copy the Selenium script to the container
-# COPY your_script.py .
-
-# # Set the default command to run the script
-# CMD ["python", "your_script.py"]
-
-
-
 # Base image with Python
 FROM python:3.11-slim
 
@@ -59,6 +35,30 @@ EXPOSE 8888
 # Set the default command to start Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
 
+
+
+# -----------¡¡¡IGNORAR A PARTIR DE AQUÍ!!!-------
+# # Base image with Python
+# FROM python:3.11-slim
+
+# # Set working directory
+# WORKDIR /app
+
+# # Install dependencies
+# RUN apt-get update && apt-get install -y \
+#     wget \
+#     x11-apps \
+#     && rm -rf /var/lib/apt/lists/*
+
+# # Install Python libraries
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# # Copy the Selenium script to the container
+# COPY your_script.py .
+
+# # Set the default command to run the script
+# CMD ["python", "your_script.py"]
 
 
 
